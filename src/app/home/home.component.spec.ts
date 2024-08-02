@@ -48,6 +48,14 @@ describe('HomeComponent', () => {
     const compiled = fixture.nativeElement;
     const h2Element = compiled.querySelector('h2');
     expect(h2Element.textContent).toContain('Welcome to Angular Testing');
+  });
+
+  it('should have sumOfThree defined', ()=>{
+    expect(component.sumOfThree).toBeDefined();
+  });
+
+  it('should have sumOfThree as a function ', ()=>{
+    expect(typeof component.sumOfThree).toBe('function');
   })
 
 
