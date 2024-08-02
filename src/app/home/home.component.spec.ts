@@ -38,7 +38,17 @@ describe('HomeComponent', () => {
 
   });
 
-  it('should display the correct title in h1')
+  it('should display the correct title in h1', ()=>{
+    const compiled = fixture.nativeElement;
+    const h1Element = compiled.querySelector('h1');
+    expect(h1Element.textContent).toContain('Hello World');
+  });
+
+  it('should display the correct subtitle in h2', ()=>{
+    const compiled = fixture.nativeElement;
+    const h2Element = compiled.querySelector('h2');
+    expect(h2Element.textContent).toContain('Welcome to Angular Testing');
+  })
 
 
 });
